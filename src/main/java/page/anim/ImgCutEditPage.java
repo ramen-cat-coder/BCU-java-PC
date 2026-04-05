@@ -16,7 +16,7 @@ import common.util.unit.Enemy;
 import main.MainBCU;
 import main.Opts;
 import page.JBTN;
-import page.JTxtField;
+import page.JTF;
 import page.MainLocale;
 import page.Page;
 import page.support.AnimTreeRenderer;
@@ -42,8 +42,8 @@ public class ImgCutEditPage extends Page implements AbEditPage {
 
 	private static final long serialVersionUID = 1L;
 
-	private final JTxtField name = new JTxtField();
-	private final JTxtField resz = new JTxtField("resize to: _%");
+	private final JTF name = new JTF();
+	private final JTF resz = new JTF("resize to: _%");
 	private final JBTN back = new JBTN(0, "back");
 	private final JBTN add = new JBTN(0, "add");
 	private final JBTN rem = new JBTN(0, "rem");

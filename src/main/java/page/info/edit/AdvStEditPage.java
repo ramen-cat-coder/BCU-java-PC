@@ -11,7 +11,7 @@ import common.util.unit.AbEnemy;
 import main.Opts;
 import page.JBTN;
 import page.JL;
-import page.JTxtField;
+import page.JTF;
 import page.Page;
 import page.info.StageViewPage;
 import page.support.AnimLCR;
@@ -25,8 +25,8 @@ public class AdvStEditPage extends Page {
 	private static final long serialVersionUID = 1L;
 
 	private final JBTN back = new JBTN(0, "back");
-	private final JTxtField sdef = new JTxtField();
-	private final JTxtField smax = new JTxtField();
+	private final JTF sdef = new JTF();
+	private final JTF smax = new JTF();
 	private final JList<SCGroup> jls = new JList<>();
 	private final JScrollPane jsps = new JScrollPane(jls);
 	private final JList<AbEnemy> jle = new JList<>();
@@ -45,9 +45,9 @@ public class AdvStEditPage extends Page {
 	private final JBTN addex = new JBTN(0, "add");
 	private final JBTN remex = new JBTN(0, "rem");
 	private final JL jlprob = new JL(0, "prob");
-	private final JTxtField jprob = new JTxtField();
+	private final JTF jprob = new JTF();
 	private final JL jltprob = new JL(0, "total");
-	private final JTxtField jtprob = new JTxtField();
+	private final JTF jtprob = new JTF();
 	private final JBTN equal = new JBTN(0, "equalprob");
 	private StageViewPage svp;
 

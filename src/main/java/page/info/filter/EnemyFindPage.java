@@ -18,7 +18,7 @@ public class EnemyFindPage extends Page implements SupPage<AbEnemy> {
 	private final EnemyListTable elt = new EnemyListTable(this);
 	private final EnemyFilterBox efb;
 	private final JScrollPane jsp = new JScrollPane(elt);
-	private final JTxtField seatf = new JTxtField();
+	private final JTF seatf = new JTF();
 
 	public EnemyFindPage(Page p) {
 		super(p);

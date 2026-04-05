@@ -19,7 +19,7 @@ public class ColorPickPage extends Page {
     private final JRadioButton[] radios = new JRadioButton[6];
     private final ButtonGroup group = new ButtonGroup();
     private final JL[] labels = new JL[7];
-    private final JTxtField[] texts = new JTxtField[7];
+    private final JTF[] texts = new JTF[7];
 
     public ColorPickPage(Page p) {
         super(p);
@@ -70,7 +70,7 @@ public class ColorPickPage extends Page {
             }
 
             labels[i] = new JL(MainLocale.PAGE, ids[i]);
-            texts[i] = new JTxtField();
+            texts[i] = new JTF();
 
             labels[i].setHorizontalAlignment(SwingConstants.CENTER);
             texts[i].setHorizontalAlignment(SwingConstants.CENTER);

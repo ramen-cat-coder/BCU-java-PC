@@ -6,7 +6,7 @@ import common.util.unit.AbEnemy;
 import common.util.unit.EneRand;
 import main.Opts;
 import page.JBTN;
-import page.JTxtField;
+import page.JTF;
 import page.JTG;
 import page.Page;
 import page.info.filter.EnemyFindPage;
@@ -41,7 +41,7 @@ public class EREditPage extends Page {
 	private final JBTN reml = new JBTN(0, "reml");
 	private final JList<AbEnemy> jle = new JList<>();
 	private final JScrollPane jspe = new JScrollPane(jle);
-	private final JTxtField name = new JTxtField();
+	private final JTF name = new JTF();
 	private final JTG[] type = new JTG[3];
 
 	private final UserPack pack;

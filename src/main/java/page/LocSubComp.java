@@ -126,7 +126,7 @@ class LSCPop extends MouseAdapter {
 			top.add(new JLabel("name ID to edit: "));
 			top.add(id0);
 			panel.add(top, BorderLayout.PAGE_START);
-			JTxtField jtf = new JTxtField(lsc.binder.getNameValue());
+			JTF jtf = new JTF(lsc.binder.getNameValue());
 			panel.add(jtf, BorderLayout.PAGE_END);
 			JTextPane jta = new JTextPane();
 			jta.setText(lsc.binder.getToolTipValue());

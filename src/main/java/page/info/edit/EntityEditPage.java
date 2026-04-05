@@ -60,17 +60,17 @@ public abstract class EntityEditPage extends Page implements SwingEditor.EditCtr
 	private final JL lwp = new JL(MainLocale.INFO,"will");
 	private final JL lli = new JL(MainLocale.INFO, "minpos");
 	private final JL cdps = new JL();
-	private final JTxtField fhp = new JTxtField();
-	private final JTxtField fhb = new JTxtField();
-	private final JTxtField fsp = new JTxtField();
-	private final JTxtField fra = new JTxtField();
-	private final JTxtField fwd = new JTxtField();
-	private final JTxtField ftb = new JTxtField();
-	private final JTxtField fbs = new JTxtField();
-	private final JTxtField ftp = new JTxtField();
-	private final JTxtField fct = new JTxtField();
-	private final JTxtField fwp = new JTxtField();
-	protected final JTxtField fli = new JTxtField();
+	private final JTF fhp = new JTF();
+	private final JTF fhb = new JTF();
+	private final JTF fsp = new JTF();
+	private final JTF fra = new JTF();
+	private final JTF fwd = new JTF();
+	private final JTF ftb = new JTF();
+	private final JTF fbs = new JTF();
+	private final JTF ftp = new JTF();
+	private final JTF fct = new JTF();
+	private final JTF fwp = new JTF();
+	protected final JTF fli = new JTF();
 	private final ReorderList<String> jli = new ReorderList<>();
 	private final JScrollPane jspi = new JScrollPane(jli);
 	private final JBTN add = new JBTN(MainLocale.PAGE, "add");
@@ -78,7 +78,7 @@ public abstract class EntityEditPage extends Page implements SwingEditor.EditCtr
 	private final JBTN copy = new JBTN(MainLocale.PAGE, "copy");
 	private final JBTN link = new JBTN(MainLocale.PAGE, "link");
 	private final JTG comm = new JTG(MainLocale.INFO, "common");
-	private final JTxtField atkn = new JTxtField();
+	private final JTF atkn = new JTF();
 	private final JL lpst = new JL(MainLocale.INFO, "postaa");
 	private final JL vpst = new JL();
 	private final JL litv = new JL(MainLocale.INFO, "atkf");
@@ -216,7 +216,7 @@ public abstract class EntityEditPage extends Page implements SwingEditor.EditCtr
 		return 1;
 	}
 
-	protected abstract void getInput(JTxtField jtf, int[] v);
+	protected abstract void getInput(JTF jtf, int[] v);
 
 	protected void ini() {
 		set(lhp);
@@ -414,7 +414,7 @@ public abstract class EntityEditPage extends Page implements SwingEditor.EditCtr
 		add(jl);
 	}
 
-	protected void set(JTxtField jtf) {
+	protected void set(JTF jtf) {
 		jtf.setEditable(editable);
 		add(jtf);
 		ljp.add(jtf);
@@ -683,7 +683,7 @@ public abstract class EntityEditPage extends Page implements SwingEditor.EditCtr
 			return extra.get(ind - ce.atks.length);
 	}
 
-	protected void input(JTxtField jtf, String text) {
+	protected void input(JTF jtf, String text) {
 
 		if (jtf == atkn) {
 			AtkDataModel adm = aet.adm;

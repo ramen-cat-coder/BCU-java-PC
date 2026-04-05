@@ -22,7 +22,7 @@ public abstract class AbRecdPage extends Page {
 	private final JBTN recd = new JBTN(-1, "mp4");
 	private final JBTN vsta = new JBTN(0, "vsta");
 	private final JBTN jlu = new JBTN(0, "line");
-	private final JTxtField seed = new JTxtField();
+	private final JTF seed = new JTF();
 	private final JTG larg = new JTG(0, "larges");
 	private final JBTN imgs = new JBTN(-1, "PNG");
 	private final JLabel len = new JLabel();

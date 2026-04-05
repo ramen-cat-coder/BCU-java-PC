@@ -5,7 +5,7 @@ import io.BCMusic;
 import main.MainBCU;
 import main.Opts;
 import page.JBTN;
-import page.JTxtField;
+import page.JTF;
 import page.Page;
 
 import javax.swing.*;
@@ -18,7 +18,7 @@ public class RecdSavePage extends Page {
 
 	private final JBTN back = new JBTN(0, "back");
 	private final JBTN save = new JBTN(0, "save");
-	private final JTxtField jtf = new JTxtField();
+	private final JTF jtf = new JTF();
 
 	private final Replay recd;
 	private String name;

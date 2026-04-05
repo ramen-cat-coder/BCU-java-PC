@@ -17,7 +17,7 @@ public class UnitFindPage extends Page implements SupPage<Unit> {
 	private final UnitListTable ult = new UnitListTable(this);
 	private final JScrollPane jsp = new JScrollPane(ult);
 	private final UnitFilterBox ufb;
-	private final JTxtField seatf = new JTxtField();
+	private final JTF seatf = new JTF();
 
 	public UnitFindPage(Page p) {
 		super(p);

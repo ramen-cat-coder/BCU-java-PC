@@ -4,7 +4,7 @@ import common.CommonStatic;
 import common.util.anim.*;
 import main.Opts;
 import page.JBTN;
-import page.JTxtField;
+import page.JTF;
 import page.JTG;
 import page.Page;
 import page.support.AnimTreeRenderer;
@@ -66,7 +66,7 @@ public class MaAnimEditPage extends Page implements AbEditPage {
 	private final JLabel infv = new JLabel();
 	private final JLabel infm = new JLabel();
 	private final JTG lmul = new JTG("Set speed for selected");
-	private final JTxtField tmul = new JTxtField();
+	private final JTF tmul = new JTF();
 	private final EditHead aep;
 
 	private Point p = null;

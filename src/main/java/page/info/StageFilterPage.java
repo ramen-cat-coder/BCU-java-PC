@@ -4,7 +4,7 @@ import common.util.stage.MapColc;
 import common.util.stage.Stage;
 import main.MainBCU;
 import page.JBTN;
-import page.JTxtField;
+import page.JTF;
 import page.Page;
 import utilpc.UtilPC;
 
@@ -16,7 +16,7 @@ public class StageFilterPage extends StagePage {
 
 	private static final long serialVersionUID = 1L;
 
-	private final JTxtField srch = new JTxtField();
+	private final JTF srch = new JTF();
 	private final Stage[] stages;
 	private final JList<Stage> jlst = new JList<>();
 	private final JScrollPane jspst = new JScrollPane(jlst);

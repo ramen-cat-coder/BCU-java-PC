@@ -55,10 +55,10 @@ public class UnitManagePage extends Page {
 	private final JBTN frea = new JBTN(0, "reassign");
 	private final JBTN vuni = new JBTN(0, "vuni");
 
-	private final JTxtField jtff = new JTxtField();
-	private final JTxtField maxl = new JTxtField();
-	private final JTxtField maxp = new JTxtField();
-	private final JTxtField jtfl = new JTxtField();
+	private final JTF jtff = new JTF();
+	private final JTF maxl = new JTF();
+	private final JTF maxp = new JTF();
+	private final JTF jtfl = new JTF();
 	private final JComboBox<String> rar = new JComboBox<>(Interpret.RARITY);
 	private final JComboBox<UnitLevel> cbl = new JComboBox<>();
 

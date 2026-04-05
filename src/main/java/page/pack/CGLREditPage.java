@@ -9,7 +9,7 @@ import common.util.stage.LvRestrict;
 import common.util.unit.Form;
 import common.util.unit.Unit;
 import page.JBTN;
-import page.JTxtField;
+import page.JTF;
 import page.MainLocale;
 import page.Page;
 import page.info.filter.UnitFindPage;
@@ -51,11 +51,11 @@ public class CGLREditPage extends Page {
 	private final JBTN addsb = new JBTN(MainLocale.PAGE, "add");
 	private final JBTN remsb = new JBTN(MainLocale.PAGE, "rem");
 
-	private final JTxtField jtfsb = new JTxtField();
-	private final JTxtField jtfal = new JTxtField();
-	private final JTxtField[] jtfra = new JTxtField[Data.RARITY_TOT];
-	private final JTxtField jtfna = new JTxtField();
-	private final JTxtField jtflr = new JTxtField();
+	private final JTF jtfsb = new JTF();
+	private final JTF jtfal = new JTF();
+	private final JTF[] jtfra = new JTF[Data.RARITY_TOT];
+	private final JTF jtfna = new JTF();
+	private final JTF jtflr = new JTF();
 
 	private final JBTN vuif = new JBTN(0, "vuif");
 
@@ -331,7 +331,7 @@ public class CGLREditPage extends Page {
 		set(jtfna);
 		set(jtflr);
 		for (int i = 0; i < jtfra.length; i++)
-			set(jtfra[i] = new JTxtField());
+			set(jtfra[i] = new JTF());
 		jlus.setCellRenderer(new UnitLCR());
 		jlua.setCellRenderer(new UnitLCR());
 		updateCGL();
@@ -345,7 +345,7 @@ public class CGLREditPage extends Page {
 		System.arraycopy(val, 0, tar, 0, Math.min(tar.length, val.length));
 	}
 
-	private void set(JTxtField jtf) {
+	private void set(JTF jtf) {
 		add(jtf);
 
 		jtf.addFocusListener(new FocusAdapter() {
@@ -370,7 +370,7 @@ public class CGLREditPage extends Page {
 
 	}
 
-	private void set(JTxtField jtf, String str, int[] lvs) {
+	private void set(JTF jtf, String str, int[] lvs) {
 		jtf.setText(UtilPC.lvText(lvs));
 	}
 
@@ -416,7 +416,7 @@ public class CGLREditPage extends Page {
 			sb = null;
 		jlsb.setSelectedValue(sb, true);
 		jtfal.setEnabled(lr != null);
-		for (JTxtField jtf : jtfra)
+		for (JTF jtf : jtfra)
 			jtf.setEnabled(lr != null);
 		updateSB();
 	}

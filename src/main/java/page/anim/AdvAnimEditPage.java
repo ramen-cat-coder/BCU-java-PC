@@ -61,7 +61,7 @@ public class AdvAnimEditPage extends Page implements TreeCont {
 	private final JL infv = new JL();
 	private final JL infm = new JL();
 	private final JTG lmul = new JTG("set speed for selected");
-	private final JTxtField tmul = new JTxtField();
+	private final JTF tmul = new JTF();
 	private final AnimCE ac;
 	private final UType animID;
 	private final MMTree mmt;

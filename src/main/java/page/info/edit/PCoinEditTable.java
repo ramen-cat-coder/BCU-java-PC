@@ -100,9 +100,9 @@ public class PCoinEditTable extends Page {
     private final NPList nlst;
     private final JScrollPane jspn;
     private final JL max = new JL(0, "maxlv");
-    private final JTxtField maxt = new JTxtField();
+    private final JTF maxt = new JTF();
     private final JL[] modl = new JL[4];
-    private final JTxtField[] modt = new JTxtField[modl.length];
+    private final JTF[] modt = new JTF[modl.length];
     private final CustomUnit unit;
     private final PackData.UserPack pack;
     private final PCoinEditPage pcep;
@@ -153,7 +153,7 @@ public class PCoinEditTable extends Page {
 
         for (int i = 0; i < modl.length; i++) {
             add(modl[i] = new JL());
-            add(modt[i] = new JTxtField());
+            add(modt[i] = new JTF());
         }
 
         addListeners();
@@ -181,7 +181,7 @@ public class PCoinEditTable extends Page {
         });
 
         for (int i = 0; i < modt.length; i++) {
-            JTxtField mod = modt[i];
+            JTF mod = modt[i];
             if (changing)
                 return;
             changing = true;
@@ -316,7 +316,7 @@ public class PCoinEditTable extends Page {
             tlst.setEnabled(false);
             maxt.setEnabled(false);
             soup.setEnabled(false);
-            for (JTxtField modif : modt)
+            for (JTF modif : modt)
                 modif.setEnabled(false);
         } else {
             unit.pcoin.verify();
@@ -333,7 +333,7 @@ public class PCoinEditTable extends Page {
             maxt.setText(String.valueOf(data[1]));
             for (int i = 0; i < modl.length; i++) {
                 JL label = modl[i];
-                JTxtField modif = modt[i];
+                JTF modif = modt[i];
                 modif.setEnabled(i < type[2] && editable);
                 if (i >= type[2]) {
                     label.setText(null);

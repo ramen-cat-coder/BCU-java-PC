@@ -36,16 +36,16 @@ public class StageLimitTable extends Page {
     private final JL racool = new JL(MainLocale.INFO, "cdo");
     private final JL ralimi = new JL(MainLocale.INFO, "ht11");
     private final JL radupe = new JL(MainLocale.INFO, "ht27");
-    private final JTxtField jmon = new JTxtField();
-    private final JTxtField jcan = new JTxtField();
-    private final JTxtField jcre = new JTxtField();
-    private final JTxtField jcos = new JTxtField();
-    private final JTxtField jusp = new JTxtField();
-    private final JTxtField jesp = new JTxtField();
-    private final JTxtField[] jcool = new JTxtField[rarityTxt.length];
-    private final JTxtField[] jcost = new JTxtField[rarityTxt.length];
-    private final JTxtField[] jlimi = new JTxtField[rarityTxt.length];
-    private final JTxtField[] jdupe = new JTxtField[rarityTxt.length];
+    private final JTF jmon = new JTF();
+    private final JTF jcan = new JTF();
+    private final JTF jcre = new JTF();
+    private final JTF jcos = new JTF();
+    private final JTF jusp = new JTF();
+    private final JTF jesp = new JTF();
+    private final JTF[] jcool = new JTF[rarityTxt.length];
+    private final JTF[] jcost = new JTF[rarityTxt.length];
+    private final JTF[] jlimi = new JTF[rarityTxt.length];
+    private final JTF[] jdupe = new JTF[rarityTxt.length];
     private final JTG cdst = new JTG(MainLocale.INFO, "ht22");
 
     private final CrossList<String> jlco = new CrossList<>(Interpret.getComboFilter(0));
@@ -126,10 +126,10 @@ public class StageLimitTable extends Page {
         add(cdst);
 
         for (int i = 0; i < rarityTxt.length; i++) {
-            reg(jcool[i] = new JTxtField());
-            reg(jcost[i] = new JTxtField());
-            reg(jlimi[i] = new JTxtField());
-            reg(jdupe[i] = new JTxtField());
+            reg(jcool[i] = new JTF());
+            reg(jcost[i] = new JTF());
+            reg(jlimi[i] = new JTF());
+            reg(jdupe[i] = new JTF());
         }
 
         jlco.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
@@ -191,7 +191,7 @@ public class StageLimitTable extends Page {
         banc.setEnabled(b && jlco.getSelectedIndex() != -1);
     }
 
-    private void reg(JTxtField jtf) { // using "reg" for "register" because "set" is already used for ui
+    private void reg(JTF jtf) { // using "reg" for "register" because "set" is already used for ui
         add(jtf);
 
         jtf.addFocusListener(new FocusAdapter() {
@@ -205,7 +205,7 @@ public class StageLimitTable extends Page {
         });
     }
 
-    private void input(JTxtField jtf, String text) {
+    private void input(JTF jtf, String text) {
         if (jtf == jmon)
             stli.maxMoney = Math.max(CommonStatic.parseIntN(text), 0);
         else if (jtf == jcan)

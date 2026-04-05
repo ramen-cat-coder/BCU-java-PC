@@ -191,10 +191,10 @@ public class Opts {
 
 	public static Object[] showTextCheck(String title, String content, boolean defaultCheck) {
 		JLabel contents = new JLabel(content);
-		JTxtField text = new JTxtField();
+		JTF text = new JTF();
 		JCheckBox check = new JCheckBox("Allow users to copy animation without password");
 		JCheckBox parentCheck = new JCheckBox("Allow users to set this pack as parent pack");
-		JTxtField parentText = new JTxtField();
+		JTF parentText = new JTF();
 
 		parentCheck.setSelected(true);
 		parentText.setEnabled(!parentCheck.isSelected());

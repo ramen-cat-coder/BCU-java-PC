@@ -30,11 +30,11 @@ public class LimitTable extends Page {
 		rarity = Page.get(MainLocale.UTIL, "r", 6);
 	}
 
-	private final JTxtField min = new JTxtField();
-	private final JTxtField num = new JTxtField();
-	private final JTxtField max = new JTxtField();
-	private final JTxtField jcg = new JTxtField();
-	private final JTxtField jlr = new JTxtField();
+	private final JTF min = new JTF();
+	private final JTF num = new JTF();
+	private final JTF max = new JTF();
+	private final JTF jcg = new JTF();
+	private final JTF jlr = new JTF();
 	private final JBTN cgb = new JBTN(MainLocale.INFO, "ht15");
 	private final JBTN lrb = new JBTN(MainLocale.INFO, "ht16");
 	private final JTG one = new JTG(MainLocale.INFO, "ht12");
@@ -195,7 +195,7 @@ public class LimitTable extends Page {
 		addListeners();
 	}
 
-	private void input(JTxtField jtf, String str) {
+	private void input(JTF jtf, String str) {
 		int val = CommonStatic.parseIntN(str);
 		if (jtf == max) {
 			if (val < 0)
@@ -223,7 +223,7 @@ public class LimitTable extends Page {
 		add(jl);
 	}
 
-	private void set(JTxtField jtf) {
+	private void set(JTF jtf) {
 		add(jtf);
 
 		jtf.addFocusListener(new FocusAdapter() {

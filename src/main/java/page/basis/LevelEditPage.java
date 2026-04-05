@@ -35,7 +35,7 @@ public class LevelEditPage extends Page {
 
 	private final JBTN bck = new JBTN(0, "back");
 	private final JLabel pcoin = new JLabel();
-	private final JTxtField levels = new JTxtField();
+	private final JTF levels = new JTF();
 	private final JList<String> orbList = new JList<>();
 	private final JScrollPane orbScroll = new JScrollPane(orbList);
 	private final OrbBox orbb = new OrbBox(new int[] {});

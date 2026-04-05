@@ -33,7 +33,7 @@ public class ComparePage extends Page {
     private static final long serialVersionUID = 1L;
 
     private final JL[] names = new JL[3]; // TODO: minimum of 2, up to 5 (requires restructure... x_x)
-    private final JTxtField[] level = new JTxtField[names.length];
+    private final JTF[] level = new JTF[names.length];
     private final EntityAbilities[] abilities = new EntityAbilities[names.length];
     private final JScrollPane[] abilityPanes = new JScrollPane[names.length];
 
@@ -102,7 +102,7 @@ public class ComparePage extends Page {
         }
 
         for (int i = 0; i < level.length; i++) {
-            JTxtField jtf = new JTxtField("-");
+            JTF jtf = new JTF("-");
             jtf.setEnabled(false);
             add(level[i] = jtf);
         }
@@ -239,7 +239,7 @@ public class ComparePage extends Page {
         }
 
         for (int i = 0; i < level.length; i++) {
-            JTxtField jtf = level[i];
+            JTF jtf = level[i];
             int finalI = i;
             jtf.addFocusListener(new FocusAdapter() {
                 @Override
