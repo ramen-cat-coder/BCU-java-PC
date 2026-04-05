@@ -23,15 +23,15 @@ class AtkEditTable extends Page {
 	private final JL lct = new JL(1, "count");
 	private final JL lab = new JL(1, "ability");
 	private final JL lmv = new JL(1, "move");
-	private final JTxtField fatk = new JTxtField();
-	private final JTxtField fpre = new JTxtField();
-	private final JTxtField fld0 = new JTxtField(); // Applies to AtkDataModel.ld0
-	private final JTxtField fld1 = new JTxtField(); // Applies to AtkDataModel.ld1
-	private final JTxtField ftarg = new JTxtField(); // Applies to AtkDataModel.targ
-	private final JTxtField fdir = new JTxtField(); // Applies to AtkDataModel.dire
-	private final JTxtField fcnt = new JTxtField();
-	private final JTxtField fabi = new JTxtField();
-	private final JTxtField fmov = new JTxtField();
+	private final JTF fatk = new JTF();
+	private final JTF fpre = new JTF();
+	private final JTF fld0 = new JTF(); // Applies to AtkDataModel.ld0
+	private final JTF fld1 = new JTF(); // Applies to AtkDataModel.ld1
+	private final JTF ftarg = new JTF(); // Applies to AtkDataModel.targ
+	private final JTF fdir = new JTF(); // Applies to AtkDataModel.dire
+	private final JTF fcnt = new JTF();
+	private final JTF fabi = new JTF();
+	private final JTF fmov = new JTF();
 	private final JTG isr = new JTG(1, "isr");
 	private final JTG spt = new JTG();
 
@@ -175,7 +175,7 @@ class AtkEditTable extends Page {
 		spt.setLnr(x -> adm.specialTrait = spt.isSelected());
 	}
 
-	private void input(JTxtField jtf, String text) {
+	private void input(JTF jtf, String text) {
 		if (text.length() > 0) {
 			if (jtf == fabi) {
 				int[] ent = CommonStatic.parseIntsN(text);
@@ -238,7 +238,7 @@ class AtkEditTable extends Page {
 		add(jl);
 	}
 
-	private void set(JTxtField jtf) {
+	private void set(JTF jtf) {
 		jtf.setEditable(editable);
 		add(jtf);
 		ljp.add(jtf);

@@ -23,15 +23,15 @@ public class StageSearchPage extends StagePage {
     private static final long serialVersionUID = 1L;
     private final JL mapN = new JL("Stagemap Name:");
     private final JL staN = new JL("Stage Name:");
-    private final JTxtField mapName = new JTxtField();
-    private final JTxtField stageName = new JTxtField();
+    private final JTF mapName = new JTF();
+    private final JTF stageName = new JTF();
 
-    private final JTxtField HPCount = new JTxtField();
+    private final JTF HPCount = new JTF();
     private final JL baseHP = new JL(1, "ht00");
     private final JBTN greaterBaseHP = new JBTN();
     private byte HPChoice = -1;
 
-    private final JTxtField WidthAmount = new JTxtField();
+    private final JTF WidthAmount = new JTF();
     private final JL StageWidth = new JL(1, "ht02");
     private final JBTN greaterWidth = new JBTN();
     private byte WidthChoice = -1;

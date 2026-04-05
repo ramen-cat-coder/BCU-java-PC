@@ -35,24 +35,24 @@ class HeadEditTable extends Page {
 	private final JL max = new JL(MainLocale.INFO, "ht02");
 	private final JBTN bg = new JBTN(MainLocale.INFO, "ht04");
 	private final JBTN cas = new JBTN(MainLocale.INFO, "ht05");
-	private final JTxtField name = new JTxtField();
-	private final JTxtField jhea = new JTxtField();
-	private final JTxtField jlen = new JTxtField();
-	private final JTxtField jbg = new JTxtField();
-	private final JTxtField jcas = new JTxtField();
-	private final JTxtField jm0 = new JTxtField();
-	private final JTxtField jmh = new JTxtField();
-	private final JTxtField jm1 = new JTxtField();
-	private final JTxtField jbgh = new JTxtField();
-	private final JTxtField jbg1 = new JTxtField();
+	private final JTF name = new JTF();
+	private final JTF jhea = new JTF();
+	private final JTF jlen = new JTF();
+	private final JTF jbg = new JTF();
+	private final JTF jcas = new JTF();
+	private final JTF jm0 = new JTF();
+	private final JTF jmh = new JTF();
+	private final JTF jm1 = new JTF();
+	private final JTF jbgh = new JTF();
+	private final JTF jbg1 = new JTF();
 	private final JTG con = new JTG(MainLocale.INFO, "ht03");
 	private final JTG bgrd = new JTG(MainLocale.INFO, "bossguard");
-	private final JTxtField[] star = new JTxtField[4];
-	private final JTxtField jmax = new JTxtField();
+	private final JTF[] star = new JTF[4];
+	private final JTF jmax = new JTF();
 	private final JL res = new JL(MainLocale.INFO, "minspawn");
 	private final JL cost = new JL(MainLocale.INFO, "chcos");
-	private final JTxtField jres = new JTxtField();
-	private final JTxtField cos = new JTxtField();
+	private final JTF jres = new JTF();
+	private final JTF cos = new JTF();
 	private final JTG dojo = new JTG(MainLocale.PAGE,"dojo");
 
 	private Stage sta;
@@ -215,7 +215,7 @@ class HeadEditTable extends Page {
 		jmh.setEnabled(b);
 		jm1.setEnabled(b);
 		dojo.setEnabled(b);
-		for (JTxtField jtf : star)
+		for (JTF jtf : star)
 			jtf.setEnabled(b);
 		cos.setEnabled(b);
 	}
@@ -290,12 +290,12 @@ class HeadEditTable extends Page {
 		con.setSelected(true);
 
 		for (int i = 0; i < 4; i++)
-			set(star[i] = new JTxtField());
+			set(star[i] = new JTF());
 		addListeners();
 		abler(false);
 	}
 
-	private void input(JTxtField jtf, String str) {
+	private void input(JTF jtf, String str) {
 		if (sta == null)
 			return;
 		if (jtf == name) {
@@ -529,7 +529,7 @@ class HeadEditTable extends Page {
 		add(jl);
 	}
 
-	private void set(JTxtField jtf) {
+	private void set(JTF jtf) {
 		add(jtf);
 
 		jtf.addFocusListener(new FocusAdapter() {

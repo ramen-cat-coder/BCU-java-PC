@@ -9,7 +9,7 @@ import javax.swing.event.DocumentEvent
 import javax.swing.event.DocumentListener
 
 
-class JTxtField @JvmOverloads constructor(tos: String = "") : JTextField(tos), CustomComp {
+class JTF @JvmOverloads constructor(tos: String = "") : JTextField(tos), CustomComp {
     private var hint: String? = null
     init {
         addKeyListener(object : KeyAdapter() {

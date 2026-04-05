@@ -7,7 +7,7 @@ import common.util.stage.MapColc.PackMapColc;
 import common.util.stage.Stage;
 import common.util.stage.StageLimit;
 import page.JBTN;
-import page.JTxtField;
+import page.JTF;
 import page.Page;
 
 import javax.swing.*;
@@ -17,8 +17,8 @@ public class LimitEditPage extends Page {
 	private static final long serialVersionUID = 1L;
 
 	private final JBTN back = new JBTN(0, "back");
-	private final JTxtField star = new JTxtField();
-	private final JTxtField stag = new JTxtField();
+	private final JTF star = new JTF();
+	private final JTF stag = new JTF();
 	private final JList<Limit> jll = new JList<>();
 	private final JScrollPane jspl = new JScrollPane(jll);
 	private final JBTN addl = new JBTN(0, "add");

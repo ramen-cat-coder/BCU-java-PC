@@ -29,7 +29,7 @@ public class SoulEditPage extends Page {
     private final JL lbs = new JL(0, "soul");
     private final JL lbd = new JL(0, "seleanim");
 
-    private final JTxtField jtfs = new JTxtField();
+    private final JTF jtfs = new JTF();
 
     private final Vector<PackData.UserPack> vpack = new Vector<>(UserProfile.getUserPacks());
     private final JList<PackData.UserPack> jlp = new JList<>(vpack);
