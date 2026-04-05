@@ -23,15 +23,15 @@ class AtkEditTable extends Page {
 	private final JL lct = new JL(1, "count");
 	private final JL lab = new JL(1, "ability");
 	private final JL lmv = new JL(1, "move");
-	private final JTxtField fieldAtkDamage = new JTxtField();
-	private final JTxtField fieldPreAtkAnim = new JTxtField();
-	private final JTxtField fieldLDPoint0 = new JTxtField(); // Applies to AtkDataModel.ld0
-	private final JTxtField fieldLDPoint1 = new JTxtField(); // Applies to AtkDataModel.ld1
-	private final JTxtField fieldTargetType = new JTxtField(); // Applies to AtkDataModel.targ
-	private final JTxtField fieldAtkDirection = new JTxtField(); // Applies to AtkDataModel.dire
-	private final JTxtField fieldAtkCount = new JTxtField();
-	private final JTxtField fieldAbilities = new JTxtField();
-	private final JTxtField fieldMove = new JTxtField();
+	private final JTxtField fatk = new JTxtField();
+	private final JTxtField fpre = new JTxtField();
+	private final JTxtField fld0 = new JTxtField(); // Applies to AtkDataModel.ld0
+	private final JTxtField fld1 = new JTxtField(); // Applies to AtkDataModel.ld1
+	private final JTxtField ftarg = new JTxtField(); // Applies to AtkDataModel.targ
+	private final JTxtField fdir = new JTxtField(); // Applies to AtkDataModel.dire
+	private final JTxtField fcnt = new JTxtField();
+	private final JTxtField fabi = new JTxtField();
+	private final JTxtField fmov = new JTxtField();
 	private final JTG isr = new JTG(1, "isr");
 	private final JTG spt = new JTG();
 
@@ -75,15 +75,15 @@ class AtkEditTable extends Page {
 		set(lmv, x, y, 0, 400, 200, 50);
 		set(isr, x, y, 0, 450, 200, 50);
 		set(spt, x, y, 200, 450, 200, 50);
-		set(fieldAtkDamage, x, y, 200, 0, 200, 50);
-		set(fieldPreAtkAnim, x, y, 200, 50, 200, 50);
-		set(fieldLDPoint0, x, y, 200, 100, 200, 50);
-		set(fieldLDPoint1, x, y, 200, 150, 200, 50);
-		set(fieldTargetType, x, y, 200, 200, 200, 50);
-		set(fieldAtkDirection, x, y, 200, 250, 200, 50);
-		set(fieldAtkCount, x, y, 200, 300, 200, 50);
-		set(fieldAbilities, x, y, 200, 350, 200, 50);
-		set(fieldMove, x, y, 200, 400, 200, 50);
+		set(fatk, x, y, 200, 0, 200, 50);
+		set(fpre, x, y, 200, 50, 200, 50);
+		set(fld0, x, y, 200, 100, 200, 50);
+		set(fld1, x, y, 200, 150, 200, 50);
+		set(ftarg, x, y, 200, 200, 200, 50);
+		set(fdir, x, y, 200, 250, 200, 50);
+		set(fcnt, x, y, 200, 300, 200, 50);
+		set(fabi, x, y, 200, 350, 200, 50);
+		set(fmov, x, y, 200, 400, 200, 50);
 	}
 
 	protected void setData(AtkDataModel data, double multi, double lvMulti) {
@@ -91,14 +91,14 @@ class AtkEditTable extends Page {
 		mul = multi;
 		lvMul = lvMulti;
 
-		fieldAtkDamage.setText(String.valueOf((int) (Math.round(adm.atk * lvMul) * mul)));
-		fieldPreAtkAnim.setText(String.valueOf(adm.pre));
-		fieldLDPoint0.setText(String.valueOf(adm.ld0));
-		fieldLDPoint1.setText(String.valueOf(adm.ld1));
-		fieldTargetType.setText(String.valueOf(adm.targ));
-		fieldAtkDirection.setText(String.valueOf(adm.dire));
-		fieldAtkCount.setText(String.valueOf(adm.count));
-		fieldMove.setText(String.valueOf(adm.move));
+		fatk.setText(String.valueOf((int) (Math.round(adm.atk * lvMul) * mul)));
+		fpre.setText(String.valueOf(adm.pre));
+		fld0.setText(String.valueOf(adm.ld0));
+		fld1.setText(String.valueOf(adm.ld1));
+		ftarg.setText(String.valueOf(adm.targ));
+		fdir.setText(String.valueOf(adm.dire));
+		fcnt.setText(String.valueOf(adm.count));
+		fmov.setText(String.valueOf(adm.move));
 		apt.setData(adm.ce.common ? adm.ce.rep.proc : adm.proc);
 		int alt = adm.getAltAbi();
 		int i = 0;
@@ -112,7 +112,7 @@ class AtkEditTable extends Page {
 			alt >>= 1;
 			i++;
 		}
-		fieldAbilities.setText(str + "}");
+		fabi.setText(str + "}");
 		isr.setSelected(adm.range);
 		spt.setVisible(!isUnit || adm.dire != 1);
 		if (spt.isVisible()) {
@@ -134,18 +134,18 @@ class AtkEditTable extends Page {
 		set(lct);
 		set(lab);
 		set(lmv);
-		set(fieldAtkDamage);
-		set(fieldPreAtkAnim);
-		set(fieldLDPoint0);
-		set(fieldLDPoint1);
-		set(fieldTargetType);
-		set(fieldAtkDirection);
-		set(fieldAtkCount);
-		set(fieldAbilities);
-		set(fieldMove);
+		set(fatk);
+		set(fpre);
+		set(fld0);
+		set(fld1);
+		set(ftarg);
+		set(fdir);
+		set(fcnt);
+		set(fabi);
+		set(fmov);
 		add(isr);
 		add(spt);
-		fieldTargetType.setToolTipText(
+		ftarg.setToolTipText(
 				"<html>" + "+1 for normal attack<br>"
 						+ "+2 to attack kb<br>"
 						+ "+4 to attack underground<br>"
@@ -154,9 +154,9 @@ class AtkEditTable extends Page {
 						+ "+32 to attack ghost<br>"
 						+ "+64 to attack entities that can revive others<br>"
 						+ "+128 to attack enter animations</html>");
-		fieldAtkDirection.setToolTipText("direction, 1 means attack enemies, 0 means not an attack, -1 means assist allies");
+		fdir.setToolTipText("direction, 1 means attack enemies, 0 means not an attack, -1 means assist allies");
 
-		fieldPreAtkAnim.setToolTipText(
+		fpre.setToolTipText(
 				"<html>use 0 for random attack attaching to previous one.<br>pre=0 for first attack will invalidate it</html>");
 		StringBuilder ttt = new StringBuilder("<html>enter ID of abilities separated by comma or space.<br>" + "it changes the ability state"
 				+ "(has to hot has, not has to has)<br>"
@@ -164,7 +164,7 @@ class AtkEditTable extends Page {
 
 		for (int i = 0; i < Interpret.SABIS.length; i++)
 			ttt.append(i).append(": ").append(Interpret.SABIS[i]).append("<br>");
-		fieldAbilities.setToolTipText(ttt + "</html>");
+		fabi.setToolTipText(ttt + "</html>");
 
 		isr.setEnabled(editable);
 		spt.setEnabled(editable);
@@ -177,7 +177,7 @@ class AtkEditTable extends Page {
 
 	private void input(JTxtField jtf, String text) {
 		if (text.length() > 0) {
-			if (jtf == fieldAbilities) {
+			if (jtf == fabi) {
 				int[] ent = CommonStatic.parseIntsN(text);
 				int ans = 0;
 				for (int i : ent)
@@ -189,44 +189,44 @@ class AtkEditTable extends Page {
 				adm.alt = ans;
 			}
 			int v = CommonStatic.parseIntN(text);
-			if (jtf == fieldAtkDamage) {
+			if (jtf == fatk) {
 				adm.atk = findIdealAtkValue(v);
 			}
-			if (jtf == fieldPreAtkAnim) {
+			if (jtf == fpre) {
 				if (v < 0)
 					v = 1;
 				adm.pre = v;
 			}
-			if (jtf == fieldLDPoint0) {
+			if (jtf == fld0) {
 				adm.ld0 = v;
 				if (adm.ld0 != 0 || adm.ld1 != 0)
 					if (adm.ld1 <= v)
 						adm.ld1 = v + 1;
 			}
-			if (jtf == fieldLDPoint1) {
+			if (jtf == fld1) {
 				adm.ld1 = v;
 				if (adm.ld0 != 0 || adm.ld1 != 0)
 					if (adm.ld0 >= v)
 						adm.ld0 = v - 1;
 			}
-			if (jtf == fieldTargetType) {
+			if (jtf == ftarg) {
 				if (v < 1)
 					v = 1;
 				adm.targ = v;
 			}
-			if (jtf == fieldAtkDirection) {
+			if (jtf == fdir) {
 				if (v < -1)
 					v = -1;
 				if (v > 1)
 					v = 1;
 				adm.dire = v;
 			}
-			if (jtf == fieldAtkCount) {
+			if (jtf == fcnt) {
 				if (v < 0)
 					v = -1;
 				adm.count = v;
 			}
-			if (jtf == fieldMove)
+			if (jtf == fmov)
 				adm.move = v;
 		}
 		callBack(null);
