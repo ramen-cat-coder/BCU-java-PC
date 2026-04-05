@@ -10,7 +10,7 @@ import common.util.unit.AbEnemy;
 import common.util.unit.EneRand;
 import main.Opts;
 import page.JBTN;
-import page.JTF;
+import page.JTxtField;
 import page.MainLocale;
 import page.Page;
 import page.battle.BattleSetupPage;
@@ -49,7 +49,7 @@ public class StageEditPage extends Page {
 	private final JBTN rmst = new JBTN(0, "rmst");
 	private final JBTN recd = new JBTN(0, "replay");
 	private final JBTN elim = new JBTN(0, "limit");
-	private final JTF enam = new JTF();
+	private final JTxtField enam = new JTxtField();
 	private final StageEditTable jt;
 	private final JScrollPane jspjt;
 	private final RLFIM<StageMap> jlsm = new RLFIM<>(() -> this.changing = true, () -> changing = false,

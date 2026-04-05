@@ -5,7 +5,7 @@ import common.util.stage.Replay;
 import main.MainBCU;
 import main.Opts;
 import page.JBTN;
-import page.JTF;
+import page.JTxtField;
 import page.Page;
 
 import javax.swing.*;
@@ -17,7 +17,7 @@ public class RecdManagePage extends AbRecdPage {
 	private static final long serialVersionUID = 1L;
 
 	private final JBTN dele = new JBTN(0, "rem");
-	private final JTF rena = new JTF();
+	private final JTxtField rena = new JTxtField();
 	private final JList<Replay> jlr = new JList<>();
 	private final JScrollPane jspr = new JScrollPane(jlr);
 

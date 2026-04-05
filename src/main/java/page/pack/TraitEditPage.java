@@ -44,7 +44,7 @@ public class TraitEditPage extends Page {
     private final JBTN vuif = new JBTN(MainLocale.PAGE, "vuif");
     private final JTG altrg = new JTG(MainLocale.PAGE, "traitfect");
     private final JL adv = new JL(MainLocale.PAGE, "advtrt");
-    private final JTF ctrna = new JTF();
+    private final JTxtField ctrna = new JTxtField();
 
     private final ReorderList<Form> jlf = new ReorderList<>();
     private final JScrollPane jspf = new JScrollPane(jlf);

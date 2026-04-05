@@ -1,6 +1,6 @@
 package page.support;
 
-import page.JTF;
+import page.JTxtField;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -8,10 +8,10 @@ import java.util.List;
 
 public class ListJtfPolicy extends FocusTraversalPolicy {
 
-	private final List<JTF> list = new ArrayList<>();
+	private final List<JTxtField> list = new ArrayList<>();
 	private boolean end = false;
 
-	public void add(JTF jtf) {
+	public void add(JTxtField jtf) {
 		if (!end)
 			list.add(jtf);
 	}
@@ -29,7 +29,7 @@ public class ListJtfPolicy extends FocusTraversalPolicy {
 			ind = 0;
 		else
 			ind++;
-		JTF jtf = list.get(ind);
+		JTxtField jtf = list.get(ind);
 		if (jtf.isEnabled())
 			return jtf;
 		else
@@ -46,7 +46,7 @@ public class ListJtfPolicy extends FocusTraversalPolicy {
 		else
 			ind--;
 
-		JTF jtf = list.get(ind);
+		JTxtField jtf = list.get(ind);
 		if (jtf.isEnabled())
 			return jtf;
 		else

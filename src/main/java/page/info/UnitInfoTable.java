@@ -12,7 +12,7 @@ import common.util.unit.Level;
 import common.util.unit.Trait;
 import main.MainBCU;
 import page.JL;
-import page.JTF;
+import page.JTxtField;
 import page.MainLocale;
 import page.Page;
 import utilpc.Interpret;
@@ -35,7 +35,7 @@ public class UnitInfoTable extends Page {
 	private final JL[][] upgrade = new JL[3][2];
 	private final JL[] atks;
 	private final JLabel[] proc;
-	private final JTF jtf = new JTF();
+	private final JTxtField jtf = new JTxtField();
 	private final JLabel pcoin;
 	private final JTextArea descr = new JTextArea();
 	private final JTextArea cfdesc = new JTextArea();

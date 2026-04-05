@@ -11,7 +11,7 @@ import common.util.unit.Form;
 import common.util.unit.Unit;
 import page.JBTN;
 import page.JL;
-import page.JTF;
+import page.JTxtField;
 import page.Page;
 import page.info.UnitInfoPage;
 import page.info.filter.UnitEditBox;
@@ -24,16 +24,16 @@ public class FormEditPage extends EntityEditPage {
 	private final JL ldr = new JL(1, "price");
 	private final JL lrs = new JL(1, "cdo");
 	private final JL llr = new JL(1, "t7");
-	private final JTF fdr = new JTF();
-	private final JTF flv = new JTF();
-	private final JTF frs = new JTF();
-	private final JTF flr = new JTF();
+	private final JTxtField fdr = new JTxtField();
+	private final JTxtField flv = new JTxtField();
+	private final JTxtField frs = new JTxtField();
+	private final JTxtField flr = new JTxtField();
 	private final JBTN vuni = new JBTN(0, "vuni");
 	private final JBTN stat = new JBTN(0, "stat");
 	private final JBTN impt = new JBTN(0, "import");
 	private final JBTN vene = new JBTN(0, "enemy");
 	private final JBTN pcoin = new JBTN(0, "pcoin");
-	private final JTF[] fdesc = new JTF[4];
+	private final JTxtField[] fdesc = new JTxtField[4];
 	private final UnitEditBox ueb;
 	private final Form form;
 	private final CustomUnit cu;
@@ -77,7 +77,7 @@ public class FormEditPage extends EntityEditPage {
 	}
 
 	@Override
-	protected void getInput(JTF jtf, int[] v) {
+	protected void getInput(JTxtField jtf, int[] v) {
 		if (jtf == fdr)
 			cu.price = (int) (v[0] / 1.5);
 		if (jtf == flv) {
@@ -143,9 +143,9 @@ public class FormEditPage extends EntityEditPage {
 		add(pcoin);
 		pcoin.setLnr(x -> changePanel(new PCoinEditPage(getThis(),form, editable)));
 		for (int i = 0 ; i < fdesc.length ; i++)
-			add(fdesc[i] = new JTF());
+			add(fdesc[i] = new JTxtField());
 
-		for (JTF jtf : fdesc)
+		for (JTxtField jtf : fdesc)
 			jtf.setEnabled(editable);
 
 		for (int i = 0; i < fdesc.length; i++) {
@@ -215,7 +215,7 @@ public class FormEditPage extends EntityEditPage {
 
 		int h = 1000;
 
-		for (JTF jtf : fdesc) {
+		for (JTxtField jtf : fdesc) {
 			set(jtf, x, y, 650, h, 750, 50);
 			h += 50;
 		}

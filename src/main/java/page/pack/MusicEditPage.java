@@ -10,7 +10,7 @@ import io.BCMusic;
 import main.Opts;
 import page.JBTN;
 import page.JL;
-import page.JTF;
+import page.JTxtField;
 import page.Page;
 import page.support.Exporter;
 import page.support.Importer;
@@ -42,7 +42,7 @@ public class MusicEditPage extends Page {
 	private final JBTN stop = new JBTN(0, "stop");
 	private final JBTN show = new JBTN(0, "show");
 	private final JL jlp = new JL(0, "loop");
-	private final JTF jtp = new JTF();
+	private final JTxtField jtp = new JTxtField();
 
 	private final UserPack pack;
 	private Music sele;

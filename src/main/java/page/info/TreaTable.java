@@ -6,7 +6,7 @@ import common.battle.BasisSet;
 import common.system.Node;
 import common.util.Data;
 import main.MainBCU;
-import page.JTF;
+import page.JTxtField;
 import page.JTG;
 import page.Page;
 
@@ -35,9 +35,9 @@ public class TreaTable extends Page {
 
 	private final JLabel[] jln = new JLabel[TREA.length];
 
-	private final JTF[] jtf = new JTF[TREA.length];
+	private final JTxtField[] jtf = new JTxtField[TREA.length];
 	private final JTG[] jlb = new JTG[TCOLP.length];
-	private final JTF[] jcf = new JTF[TCOLP.length];
+	private final JTxtField[] jcf = new JTxtField[TCOLP.length];
 
 	private final List<Node<Integer>> lncs = new ArrayList<>();
 
@@ -65,10 +65,10 @@ public class TreaTable extends Page {
 	public boolean hasFocus() {
 		if (super.hasFocus())
 			return true;
-		for (JTF c : jcf)
+		for (JTxtField c : jcf)
 			if (c.hasFocus())
 				return true;
-		for (JTF c : jtf)
+		for (JTxtField c : jtf)
 			if (c.hasFocus())
 				return true;
 		return false;
@@ -115,7 +115,7 @@ public class TreaTable extends Page {
 			if (j < TCOLP.length && i == TCOLP[j][0]) {
 				k = TCOLP[j][1];
 				add(jlb[j] = new JTG(TCTX[j]));
-				add(jcf[j] = new JTF());
+				add(jcf[j] = new JTxtField());
 				lncs.add(colp = new Node<>(-j - 1));
 				if (nc == null)
 					cur = nc = colp;
@@ -152,7 +152,7 @@ public class TreaTable extends Page {
 			int ind = TIND[i];
 			int I = i;
 			jln[i] = new JLabel(TREA[ind]);
-			jtf[i] = new JTF(tos(getValue(ind, BasisSet.current().t()), i));
+			jtf[i] = new JTxtField(tos(getValue(ind, BasisSet.current().t()), i));
 			Node<Integer> temp = new Node<>(i + 1);
 			if (nc == null)
 				cur = nc = temp;

@@ -43,9 +43,9 @@ public class BGEditPage extends Page {
 	private final JTG top = new JTG("top");
 	private final JTG overlay = new JTG(MainLocale.PAGE, "overlay");
 	private final JL[] cl = new JL[5];
-	private final JTF[] cs = new JTF[4];
+	private final JTxtField[] cs = new JTxtField[4];
 	private final JL[] ol = new JL[3];
-	private final JTF[] os = new JTF[3];
+	private final JTxtField[] os = new JTxtField[3];
 	private final JComboBox<String> eff = new JComboBox<>();
 	private final JBTN reset = new JBTN(MainLocale.PAGE, "reset");
 
@@ -286,13 +286,13 @@ public class BGEditPage extends Page {
 		add(overlay);
 		add(reset);
 		for (int i = 0; i < 4; i++) {
-			add(cs[i] = new JTF());
+			add(cs[i] = new JTxtField());
 		}
 		for(int i = 0; i < 5; i++) {
 			add(cl[i] = new JL(MainLocale.PAGE, "bgcl"+i));
 		}
 		for(int i = 0; i < 3; i++) {
-			add(os[i] = new JTF());
+			add(os[i] = new JTxtField());
 			add(ol[i] = new JL(MainLocale.PAGE, "bgcl"+(i+5)));
 		}
 		Vector<String> effVector = new Vector<>();

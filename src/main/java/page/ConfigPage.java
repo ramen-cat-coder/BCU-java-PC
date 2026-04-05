@@ -48,7 +48,7 @@ public class ConfigPage extends Page {
 	private final JCB perfo = new JCB("60 FPS");
 	private final JL preflv = new JL(MainLocale.PAGE, "preflv");
 	private final JCB shake = new JCB(MainLocale.PAGE, "shake");
-	private final JTF prlvmd = new JTF();
+	private final JTxtField prlvmd = new JTxtField();
 	private final JBTN[] left = new JBTN[4];
 	private final JBTN[] right = new JBTN[4];
 	private final JL[] name = new JL[4];
@@ -84,8 +84,8 @@ public class ConfigPage extends Page {
 	private final JBTN vres = new JBTN(MainLocale.PAGE, "viewreset");
 	private final JCB excont = new JCB(MainLocale.PAGE, "excont");
 	private final JL autosave = new JL(MainLocale.PAGE, "autosave");
-	private final JTF savetime = new JTF(MainBCU.autoSaveTime > 0 ? MainBCU.autoSaveTime + "min" : "deactivated");
-	private final JTF tole = new JTF(String.valueOf(MainBCU.searchTolerance));
+	private final JTxtField savetime = new JTxtField(MainBCU.autoSaveTime > 0 ? MainBCU.autoSaveTime + "min" : "deactivated");
+	private final JTxtField tole = new JTxtField(String.valueOf(MainBCU.searchTolerance));
 	private final JTG dyna = new JTG(MainLocale.PAGE, "dynamic");
 	private final JCB reallv = new JCB(MainLocale.PAGE, "reallv");
 
@@ -553,7 +553,7 @@ public class ConfigPage extends Page {
 		addListeners();
 	}
 
-	protected void set(JTF jtf) {
+	protected void set(JTxtField jtf) {
 		jtf.setLnr(e -> {
 			String text = jtf.getText().trim();
 			if (text.length() > 0) {

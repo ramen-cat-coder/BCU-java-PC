@@ -10,7 +10,7 @@ import common.util.unit.Form;
 import common.util.unit.Unit;
 import page.JBTN;
 import page.JL;
-import page.JTF;
+import page.JTxtField;
 import page.Page;
 import page.info.filter.UnitFindPage;
 import page.support.AnimLCR;
@@ -44,7 +44,7 @@ public class ComboEditPage extends Page {
     private final JScrollPane jspf = new JScrollPane(jlf);
     private final ComboEditTable jlc = new ComboEditTable(this, null);
     private final JScrollPane jspc = new JScrollPane(jlc);
-    private final JTF comboname = new JTF();
+    private final JTxtField comboname = new JTxtField();
 
     private final JBTN back = new JBTN(0, "back");
     private final JBTN addf = new JBTN(0, "add");

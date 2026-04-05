@@ -2,7 +2,7 @@ package page.pack;
 
 import common.pack.PackData.UserPack;
 import common.util.stage.Replay;
-import page.JTF;
+import page.JTxtField;
 import page.Page;
 import page.battle.AbRecdPage;
 
@@ -12,7 +12,7 @@ public class RecdPackPage extends AbRecdPage {
 
 	private static final long serialVersionUID = 1L;
 
-	private final JTF rena = new JTF();
+	private final JTxtField rena = new JTxtField();
 	private final JList<Replay> jlr = new JList<>();
 	private final JScrollPane jspr = new JScrollPane(jlr);
 

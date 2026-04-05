@@ -4,7 +4,7 @@ import common.battle.BasisSet;
 import common.util.stage.Limit;
 import common.util.unit.Form;
 import page.JBTN;
-import page.JTF;
+import page.JTxtField;
 import page.JTG;
 import page.Page;
 import page.info.filter.UnitFilterBox;
@@ -25,7 +25,7 @@ public class UnitFLUPage extends LubCont {
 	private final UnitListTable ult = new UnitListTable(this);
 	private final JScrollPane jsp = new JScrollPane(ult);
 	private final UnitFilterBox ufb;
-	private final JTF seatf = new JTF();
+	private final JTxtField seatf = new JTxtField();
 
 	public UnitFLUPage(Page p, Limit lim, int price) {
 		super(p);

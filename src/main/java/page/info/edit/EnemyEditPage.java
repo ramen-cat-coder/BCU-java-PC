@@ -20,13 +20,13 @@ public class EnemyEditPage extends EntityEditPage {
 	private static final long serialVersionUID = 1L;
 
 	private final JL ldr = new JL(MainLocale.INFO, "drop");
-	private final JTF fdr = new JTF();
-	private final JTF fsr = new JTF();
+	private final JTxtField fdr = new JTxtField();
+	private final JTxtField fsr = new JTxtField();
 	private final JBTN vene = new JBTN(MainLocale.PAGE, "vene");
 	private final JBTN stat = new JBTN(MainLocale.PAGE, "stat");
 	private final JBTN impt = new JBTN(MainLocale.PAGE, "import");
 	private final JBTN vuni = new JBTN(MainLocale.PAGE, "unit");
-	private final JTF[] edesc = new JTF[4];
+	private final JTxtField[] edesc = new JTxtField[4];
 	private final EnemyEditBox eeb;
 	private final Enemy ene;
 	private final CustomEnemy ce;
@@ -47,7 +47,7 @@ public class EnemyEditPage extends EntityEditPage {
 	}
 
 	@Override
-	protected void getInput(JTF jtf, int[] v) {
+	protected void getInput(JTxtField jtf, int[] v) {
 		if (jtf == fli) {
 			float firstDouble = CommonStatic.parseFloatN(fli.getText());
 			int formatDouble = (int) (Interpret.formatDouble(firstDouble, 1) * 10);
@@ -80,9 +80,9 @@ public class EnemyEditPage extends EntityEditPage {
 		add(vuni);
 
 		for (int i = 0 ; i < edesc.length ; i++)
-			add(edesc[i] = new JTF());
+			add(edesc[i] = new JTxtField());
 
-		for (JTF jtf : edesc)
+		for (JTxtField jtf : edesc)
 			jtf.setEnabled(editable);
 
 		for (int i = 0; i < edesc.length; i++) {
@@ -141,7 +141,7 @@ public class EnemyEditPage extends EntityEditPage {
 
 		int h = 1000;
 
-		for (JTF jtf : edesc) {
+		for (JTxtField jtf : edesc) {
 			set(jtf, x, y, 650, h, 750, 50);
 			h += 50;
 		}

@@ -203,7 +203,7 @@ public abstract class SwingEditor extends Editor {
 	public static class IntEditor extends SwingEditor {
 
 		public final JL label;
-		public final JTF input = new JTF();
+		public final JTxtField input = new JTxtField();
 
 		public IntEditor(EditorGroup eg, Editors.EdiField field, String f, boolean edit) {
 			super(eg, field, f, edit);

@@ -6,7 +6,7 @@ import common.util.stage.Stage;
 import common.util.stage.StageMap;
 import main.MainBCU;
 import page.JBTN;
-import page.JTF;
+import page.JTxtField;
 import page.Page;
 import page.battle.BattleSetupPage;
 import page.battle.StRecdPage;
@@ -42,8 +42,8 @@ public class StageViewPage extends StagePage {
 
 	private final JBTN recd = new JBTN(0, "replay");
 
-	private final JTF smnm = new JTF();
-	private final JTF snam = new JTF();
+	private final JTxtField smnm = new JTxtField();
+	private final JTxtField snam = new JTxtField();
 
 	public StageViewPage(Page p, Collection<MapColc> collection) {
 		super(p);

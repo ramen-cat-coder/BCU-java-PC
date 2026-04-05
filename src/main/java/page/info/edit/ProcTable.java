@@ -4,7 +4,7 @@ import common.util.Data;
 import common.util.Data.Proc;
 import common.util.lang.Formatter;
 import main.MainBCU;
-import page.JTF;
+import page.JTxtField;
 import page.Page;
 import page.support.ListJtfPolicy;
 
@@ -137,8 +137,8 @@ public abstract class ProcTable extends Page {
 	@Override
 	public Component add(Component comp) {
 		Component ret = super.add(comp);
-		if (comp instanceof JTF)
-			ljp.add((JTF) comp);
+		if (comp instanceof JTxtField)
+			ljp.add((JTxtField) comp);
 		return ret;
 	}
 

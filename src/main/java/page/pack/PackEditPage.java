@@ -94,9 +94,9 @@ public class PackEditPage extends Page {
 	private final JBTN csol = new JBTN(MainLocale.PAGE, "csoul");
 	private final JTG cmbo = new JTG(MainLocale.PAGE, "usecombo");
 	private final JBTN vali = new JBTN(MainLocale.PAGE, "validate");
-	private final JTF jtfp = new JTF();
-	private final JTF jtfe = new JTF();
-	private final JTF jtfs = new JTF();
+	private final JTxtField jtfp = new JTxtField();
+	private final JTxtField jtfe = new JTxtField();
+	private final JTxtField jtfs = new JTxtField();
 
 	private final JL lbp = new JL(0, "pack");
 	private final JL lbe = new JL(0, "enemy");

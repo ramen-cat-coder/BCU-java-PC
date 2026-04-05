@@ -5,7 +5,7 @@ import common.util.stage.Stage;
 import main.MainBCU;
 import main.Opts;
 import page.JBTN;
-import page.JTF;
+import page.JTxtField;
 import page.Page;
 import page.support.ReorderList;
 import page.support.ReorderListener;
@@ -21,7 +21,7 @@ public class StRecdPage extends AbRecdPage {
 	private final JScrollPane jsp = new JScrollPane(list);
 	private final JBTN addr = new JBTN(0, "add");
 	private final JBTN remr = new JBTN(0, "rem");
-	private final JTF rena = new JTF();
+	private final JTxtField rena = new JTxtField();
 
 	protected final Stage st;
 

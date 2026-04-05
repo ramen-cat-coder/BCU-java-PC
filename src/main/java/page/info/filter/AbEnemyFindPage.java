@@ -17,7 +17,7 @@ public class AbEnemyFindPage extends Page implements SupPage<AbEnemy> {
     private final AbEnemyListTable elt = new AbEnemyListTable(this);
     private final AbEnemyFilterBox efb;
     private final JScrollPane jsp = new JScrollPane(elt);
-    private final JTF seatf = new JTF();
+    private final JTxtField seatf = new JTxtField();
     private final JBTN seabt = new JBTN(0, "search");
 
     public AbEnemyFindPage(Page p) {
