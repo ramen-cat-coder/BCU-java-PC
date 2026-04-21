@@ -255,11 +255,11 @@ public class BCMusic extends Data {
 		secall[ind] = true;
 	}
 
-	public static synchronized void setSE(Identifier<Music> mus) {
+	public static synchronized void setSE(Identifier<Music> mus, boolean isCustomSound) {
 		if (!play || VOL_SE == 0)
 			return;
 
-		if (mus.pack.equals(Identifier.DEF)) {
+		if (mus.pack.equals(Identifier.DEF) && !isCustomSound) {
 			setSE(mus.id);
 			return;
 		}

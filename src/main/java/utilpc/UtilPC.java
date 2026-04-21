@@ -63,8 +63,8 @@ public class UtilPC {
 		}
 
 		@Override
-		public void setSE(Identifier<Music> mus) {
-			BCMusic.setSE(mus);
+		public void setSE(Identifier<Music> mus, boolean isCustomSound) {
+			BCMusic.setSE(mus, false);
 		}
 
 		@Override
