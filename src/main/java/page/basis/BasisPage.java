@@ -47,6 +47,9 @@ public class BasisPage extends LubCont {
 	private final JBTN bcop = new JBTN(0, "copy");
 	private final JBTN form = new JBTN(0, "form");
 	private final JBTN reset = new JBTN(0, "renew");
+	private final JBTN sortCost = new JBTN(0, "sortCost");
+	private final JBTN sortLevel = new JBTN(0, "sortLevel");
+	private final JBTN sortRarity = new JBTN(0, "sortRarity");
 	private final JTG combo = new JTG(0, "combo");
 	private final JTF bsjtf = new JTF();
 	private final JTF bjtf = new JTF();
@@ -206,6 +209,9 @@ public class BasisPage extends LubCont {
 		set(lvorb, x, y, 900, 100, 200, 50);
 		set(form, x, y, 500, 450, 200, 50);
 		set(reset, x, y, 700, 450, 200, 50);
+		set(sortCost, x, y, 1100, 450, 200, 50);
+		set(sortLevel, x, y, 1100, 520, 200, 50);
+		set(sortRarity, x, y, 1100, 590, 200, 50);
 
 		set(jspcn, x, y, 500, 500, 600, 250);
 
@@ -507,6 +513,8 @@ public class BasisPage extends LubCont {
 
 		reset.addActionListener(x -> lub.resetBackup());
 
+		sortCost.addActionListener(x -> lub.sortCost());
+
 		cjtf.setTypeLnr(x -> {
 			comboName = cjtf.getText();
 			changing = true;
@@ -568,6 +576,9 @@ public class BasisPage extends LubCont {
 		add(lvorb);
 		add(ncb);
 		add(reset);
+		add(sortCost);
+		add(sortLevel);
+		add(sortRarity);
 		add(cjtf);
 		add(ujtf);
 		add(combo);

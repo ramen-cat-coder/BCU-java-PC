@@ -255,6 +255,16 @@ public class LineUpBox extends Canvas {
 		Arrays.fill(backup, null);
 	}
 
+	protected void sortCost() {
+		System.out.println("Sortign by cost");
+		Form[] unpacked = new Form[10];
+		System.arraycopy(blu.lu.fs[0],0,unpacked,0,5);
+		System.arraycopy(blu.lu.fs[1],0,unpacked,5,5);
+		Arrays.sort(unpacked,(a,b) -> Integer.compare((int) a.getPrice(price),(int) b.getPrice(price)));
+		System.arraycopy(unpacked,0,blu.lu.fs[0],0,5);
+		System.arraycopy(unpacked,5,blu.lu.fs[1],0,5);
+	}
+
 	private Form getForm(int pos) {
 		return pos < 10 ? blu.lu.fs[pos / 5][pos % 5] : backup[pos % 5];
 	}
